@@ -12,7 +12,7 @@
 <script>try{var q=new URLSearchParams(location.search).get('lang'),l=q||localStorage.getItem('lumen-lang');if(l==='ru')document.documentElement.lang='ru'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Unbounded:wght@300&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Unbounded:wght@300;400&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --night:#0C0B0D; --night-2:#15110F; --wine:#4A1622; --violet:#6B2A55;
@@ -81,11 +81,11 @@ h3{font-size:clamp(13.5px,1.15vw,15.5px);line-height:1.4;letter-spacing:.03em}
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(12,11,13,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(247,239,226,.1);--logo-bg:#0C0B0D}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:76px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
-.brand b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.2em}
+.brand b{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.2em}
 .brand small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.32em;color:var(--amber);margin-top:2px}
-.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
-.nav ul a{text-decoration:none;font-family:var(--display);font-weight:400;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:#FFF6E8;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
-html[lang=ru] .nav ul a{font-size:12px;letter-spacing:.08em}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-family:var(--display);font-weight:400;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#F3EADF;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+html[lang=ru] .nav ul a{font-size:11.5px;letter-spacing:.1em}
 .nav ul a:hover{color:var(--amber);border-color:var(--amber)}
 .nav .right{display:flex;align-items:center;gap:12px}
 .nav .btn{padding:11px 18px;font-size:12px;white-space:nowrap}
@@ -97,8 +97,8 @@ html[lang=ru] .nav ul a{font-size:12px;letter-spacing:.08em}
 .burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--cream);transition:transform .25s,top .25s}
 .burger i::before{top:-6px}.burger i::after{top:6px}
 .nav.open .burger i{background:transparent}.nav.open .burger i::before{top:0;transform:rotate(45deg)}.nav.open .burger i::after{top:0;transform:rotate(-45deg)}
-@media (max-width:1200px){.nav ul{gap:20px}.nav ul a{font-size:11px;letter-spacing:.08em}.brand b{font-size:18px}}
-@media (max-width:1000px){.nav ul{gap:16px}.nav ul a{font-size:10.5px;letter-spacing:.05em}.brand small{display:none}.nav .wrap{gap:12px}.nav .btn{padding:10px 14px;font-size:11px}}
+@media (max-width:1200px){.nav ul{gap:22px}.nav ul a,html[lang=ru] .nav ul a{font-size:10.5px;letter-spacing:.1em}.brand b{font-size:17px}}
+@media (max-width:1000px){.nav ul{gap:16px}.nav ul a,html[lang=ru] .nav ul a{font-size:10px;letter-spacing:.06em}.brand small{display:none}.nav .wrap{gap:12px}.nav .btn{padding:10px 14px;font-size:11px}}
 @media (max-width:960px){
   .burger{display:grid}
   .nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:#0C0B0D;border-bottom:1px solid rgba(247,239,226,.12);padding:8px var(--gut) 20px}
@@ -111,16 +111,16 @@ html[lang=ru] .nav ul a{font-size:12px;letter-spacing:.08em}
 /* hero */
 .hero{position:relative;overflow:hidden;background:var(--night)}
 .hero .bg{position:absolute;inset:0;background:#0C0B0D url('') 62% 100%/cover no-repeat}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,13,.8) 0%,rgba(12,11,13,.4) 48%,rgba(12,11,13,0) 72%)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,11,13,.9) 0%,rgba(12,11,13,.78) 38%,rgba(12,11,13,.35) 62%,rgba(12,11,13,0) 82%)}
 .hero > .wrap{position:relative;padding-block:clamp(56px,8vw,104px) clamp(130px,15vw,230px)}
 .hero .copy{max-width:760px;display:grid;gap:24px;min-width:0}
-.hero .lead{color:#E6DCD1;max-width:56ch}
+.hero .lead{color:#F3EADF;max-width:56ch;text-shadow:0 1px 18px rgba(12,11,13,.8)}
 .meta{display:flex;flex-wrap:wrap;gap:8px}
 .meta > span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 13px;border:1px solid rgba(247,239,226,.32);border-radius:999px;color:var(--cream);background:rgba(12,11,13,.35)}
-.hero .zero{font-size:15px;color:var(--soft-d)}
+.hero .zero{font-size:16px;color:#F3EADF;max-width:54ch;text-shadow:0 1px 14px rgba(12,11,13,.9)}
 .hero .zero b{color:var(--amber);font-weight:700}
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:4px}
-.hero .under{font-size:14px;color:var(--mute-d);max-width:58ch}
+.hero .under{font-size:14.5px;color:#E2D6CA;max-width:54ch;text-shadow:0 1px 14px rgba(12,11,13,.95)}
 @media (max-width:760px){.hero .bg{background-position:58% 100%;background-size:auto 100%}.hero .bg::after{background:linear-gradient(180deg,rgba(12,11,13,.75) 0%,rgba(12,11,13,.35) 60%,rgba(12,11,13,0) 82%)}}
 
 /* reel */
@@ -365,6 +365,16 @@ footer .bottom a{text-decoration:none} footer .bottom a:hover{color:var(--amber)
 .contact h2{font-size:clamp(20px,2.4vw,30px)}
 .contact .side .tlink{justify-self:start}
 .names{gap:8px 0}.names > span{margin-right:18px}.names > span+span::before{content:none}
+
+.meta > span{background:rgba(12,11,13,.6);border-color:rgba(247,239,226,.45)}
+.hero .btn--ghost{background:rgba(12,11,13,.55);border-color:rgba(247,239,226,.6)}
+/* RU: one display face for the whole string (Michroma has no Cyrillic) */
+html[lang=ru]{--display:"Unbounded","Manrope",system-ui,sans-serif}
+html[lang=ru] h1{font-size:clamp(25px,3.9vw,50px);line-height:1.16;letter-spacing:0}
+html[lang=ru] h2{font-size:clamp(20px,2.5vw,33px);letter-spacing:0}
+html[lang=ru] h3{letter-spacing:.01em}
+html[lang=ru] .nav ul a{letter-spacing:.06em}
+html[lang=ru] h2,html[lang=ru] h3,html[lang=ru] .nav ul a,html[lang=ru] .qa summary,html[lang=ru] .tcard dt,html[lang=ru] .fnote b,html[lang=ru] .count b,html[lang=ru] .quote cite b,html[lang=ru] .pathfoot .big,html[lang=ru] .joinbox b,html[lang=ru] .socials b,html[lang=ru] footer .motto,html[lang=ru] .tbl th{font-weight:300}
 
 </style>
 </head>
